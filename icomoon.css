@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon/icomoon.eot?6iuir');
-  src:  url('/Users/bradleychen/Documents/WebPublishing/sanfrancisco/fonts/icomoon/icomoon.eot') format('embedded-opentype'),
-    url("/Users/bradleychen/Documents/WebPublishing/sanfrancisco/fonts/icomoon/icomoon.ttf") format('truetype'),
-    url('/Users/bradleychen/Documents/WebPublishing/sanfrancisco/fonts/icomoon/icomoon.woff') format('woff'),
-    url('/Users/bradleychen/Documents/WebPublishing/sanfrancisco/fonts/icomoon/icomoon.svg') format('svg');
+  src:  url('/Users/bradleychen/Documents/GitHub/SanFrancisco/fonts/icomoon/icomoon.eot') format('embedded-opentype'),
+    url("/Users/bradleychen/Documents/GitHub/SanFrancisco/fonts/icomoon/icomoon.ttf") format('truetype'),
+    url('/Users/bradleychen/Documents/GitHub/SanFrancisco/fonts/icomoon/icomoon.woff') format('woff'),
+    url('/Users/bradleychen/Documents/GitHub/SanFrancisco/fonts/icomoon/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
