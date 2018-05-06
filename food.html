@@ -8,50 +8,52 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script src="js/jquery.flexslider.js"></script>
   <script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-    $('.flexslider').flexslider(
+    $(window).load(function() {
+      $('.flexslider').flexslider(
       {
         slideshow: false
       });
 
-  });
-</script>
+    });
+  </script>
 </head>
 
 <body>
   <div id="wrapper">
     <header>
+      
+     <h1>
       <a href = "index.html">
-           <h1>
         Golden Gate Travel Agency
-        </h1>
       </a>
-      <nav>
-       <h2 id = "menulink"><a href = "#navlinks">Menu</a></h2>
-       <ul class = "displayed" id = "navlinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sights.html" >Sights</a></li>
-        <li><a href="food.html" class = "thispage">Food</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div id="hero">
-    <img src = "images/food_hero.jpg" alt = "The Golden Gate Bridge">
-    <!-- <p>Learn everything you ever wanted to know about visiting San Francisco!</p> -->
-  </div>
-  <main>
-    <h2>Food</h2>
-    <p style = "font-size: 15pt">In San Francisco, we've got all kinds of food, served in almost any style or setting you can imagine. Sometimes visitors are looking for something quick and casual. Other times, they want to pull out all the stops. We're here to talk about those moments. Whether you’re looking for a restaurant to celebrate a special event or to simply enjoy an upscale meal, these fine dining options will surely make for a memorable meal.</p>
+    </h1>
+    
+    <nav>
+     <h2 id = "menulink"><a href = "#navlinks">Menu</a></h2>
+     <ul class = "displayed" id = "navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sights.html" >Sights</a></li>
+      <li><a href="food.html" class = "thispage">Food</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Get Started</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="hero">
+  <img src = "images/food_hero.jpg" alt = "San Francisco Food">
+  <!-- <p>Learn everything you ever wanted to know about visiting San Francisco!</p> -->
+</div>
+<main>
+  <h2>Food</h2>
+  <p style = "font-size: 12pt">In San Francisco, we've got all kinds of food, served in almost any style or setting you can imagine. Sometimes visitors are looking for something quick and casual. Other times, they want to pull out all the stops. We're here to talk about those moments. Whether you’re looking for a restaurant to celebrate a special event or to simply enjoy an upscale meal, these fine dining options will surely make for a memorable meal.</p>
 
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                  <img src="images/burger.jpg" />
-                  
-                  <div class="caption">Pair fresh seafood with California cuisine—and a spectacular view of the iconic Bay Bridge—for a perfect night out on the Bay. The Waterfront has seafood galore, where you can dive into a selection of fresh oysters, oven roasted Dungeness crab and New York strip steak. </div>
-                </li>
+  <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <img src="images/burger.jpg" />
+        
+        <div class="caption">Pair fresh seafood with California cuisine—and a spectacular view of the iconic Bay Bridge—for a perfect night out on the Bay. The Waterfront has seafood galore, where you can dive into a selection of fresh oysters, oven roasted Dungeness crab and New York strip steak. </div>
+      </li>
                 <!-- <li>
                   <img src="images/burrito.jpg" />
                 </li> -->
@@ -72,14 +74,22 @@
             </div>
           </main>
           <aside>
-            <h2>Heading 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, purus at suscipit ornare, erat turpis vehicula orci, ut semper neque leo at erat. Phasellus et laoreet tortor, a interdum tellus. Praesent vel tristique ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id mauris id elit vestibulum auctor eu sit amet est. Sed leo ex, iaculis sed neque id, finibus venenatis felis. Cras vitae consequat mauris. Pellentesque dolor diam, viverra id augue in, scelerisque consectetur eros. Pellentesque ultricies neque vitae eros interdum convallis. Mauris eget turpis accumsan lectus vehicula consectetur eu id magna. Proin tellus lorem, fringilla ut varius non, aliquet a nibh. Vivamus quis egestas nulla, non pellentesque massa.</p>
+            <h2>You should also check out...</h2>
+            <ul>
+              <li style = "font-family: San Francisco Display Medium">Acquerello: 1722 Sacramento St., San Francisco, CA 94109</li>
+              <p style = "font-family: San Francisco Display Thin">One of the first SF restaurants to serve authentically regional Italian food, Acquerello has only continued to grow since 1989, moving into an increasingly fine-dining direction while maintaining its commitment to Italian wine and local products. It now holds two Michelin stars, a distinction that chef Suzette Gresham (who's been there since the beginning) shares with only two other women in the entire U.S.</p>
+              <li style = "font-family: San Francisco Display Medium">Big 4: 1075 California St., San Francisco, CA 94108</li>
+              <p style = "font-family: San Francisco Display Thin">A recent renovation didn't change the soul of this clubby restaurant in the Huntington Hotel, named for the Bay Area's railroad pioneers. It's full of cocktails, grizzled bartenders, California memorabilia, and a hefty dose of live piano music.</p>
+              <li style = "font-family: San Francisco Display Medium">Cliff House: 1090 Point Lobos Ave., San Francisco, CA 94121</li>
+              <p style = "font-family: San Francisco Display Thin">With its staggering views of the coastline and the ruins of the Sutro Baths, this SF icon has undergone a long series of fires, rebuildings, shutters, and reopenings to achieve its current crown-jewel status. It's a little oasis at the end of the world.</p>
+            </ul>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, purus at suscipit ornare, erat turpis vehicula orci, ut semper neque leo at erat. Phasellus et laoreet tortor, a interdum tellus. Praesent vel tristique ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id mauris id elit vestibulum auctor eu sit amet est. Sed leo ex, iaculis sed neque id, finibus venenatis felis. Cras vitae consequat mauris. Pellentesque dolor diam, viverra id augue in, scelerisque consectetur eros. Pellentesque ultricies neque vitae eros interdum convallis. Mauris eget turpis accumsan lectus vehicula consectetur eu id magna. Proin tellus lorem, fringilla ut varius non, aliquet a nibh. Vivamus quis egestas nulla, non pellentesque massa.</p>
+
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, purus at suscipit ornare, erat turpis vehicula orci, ut semper neque leo at erat. Phasellus et laoreet tortor, a interdum tellus. Praesent vel tristique ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id mauris id elit vestibulum auctor eu sit amet est. Sed leo ex, iaculis sed neque id, finibus venenatis felis. Cras vitae consequat mauris. Pellentesque dolor diam, viverra id augue in, scelerisque consectetur eros. Pellentesque ultricies neque vitae eros interdum convallis. Mauris eget turpis accumsan lectus vehicula consectetur eu id magna. Proin tellus lorem, fringilla ut varius non, aliquet a nibh. Vivamus quis egestas nulla, non pellentesque massa.</p> -->
           </aside>
 
           <footer>
-           <p>Copyright Bradley Chen 2018</p>
+           <p>Copyright Bradley Chen 2018 <a href = "Citations.pdf" target = "_blank">Image and Text Citations</a></p>
          </footer>
        </div>
      </body>

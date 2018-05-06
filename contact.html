@@ -4,24 +4,50 @@
   <meta charset="utf-8">
   <title>All About San Francisco: Hotels</title>
   <link href = "responsive.css" rel = "stylesheet" type = "text/css">
-  <link rel="stylesheet" href="icomoon.css">
-  <link rel="stylesheet" href="bootstrap.css">
-  <script type="text/javascript">
-    function changeMe(sel)
-    {
-      sel.style.color = "#000";              
-    }
-</script>
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="http://code.jquery.com/jquery-1.6.2.js" type="text/javascript"></script>
+
+  <style type="text/css">
+  .required span {
+    color: red;
+  }
+</style>
+<script type="text/javascript">
+      //<![CDATA[
+      $(function(){
+
+        $('.required').each(function(){
+          $(this).html('<span>*</span>' + $(this).text() );
+        });
+
+      });
+      //]]>;
+    </script>
+    <script type="text/javascript">
+      function changeMe(sel)
+      {
+        sel.style.color = "#000";              
+      }
+    </script>
+    <style>
+    label textarea{
+     vertical-align: top;
+   }
+ </style>
+
 </head>
 
 <body>
   <div id="wrapper">
     <header>
-      <a href = "index.html">
+      
       <h1>
-        Golden Gate Travel Agency
+        <a href = "index.html">
+          Golden Gate Travel Agency
+        </a>
       </h1>
-    </a>
+      
       <nav>
        <h2 id = "menulink"><a href = "#navlinks">Menu</a></h2>
        <ul class = "displayed" id = "navlinks">
@@ -34,89 +60,95 @@
     </nav>
   </header>
   <div id="hero">
-    <img src = "images/golden_gate.jpg" alt = "The Golden Gate Bridge">
+    <img src = "images/baybridge.jpg" alt = "The Golden Gate Bridge">
     <!-- <p>Learn everything you ever wanted to know about visiting San Francisco!</p> -->
   </div>
   <main>
 
-    <h2>Book an Appointment</h2>
-    <form action="#">
-      <!-- <label for="fname">First Name: &nbsp;</label> -->
-      <input type="text" id="fname" name="firstname" placeholder="First Name (required)" required style = "width: 40%"><br><br>
+    <h2>Make An Account</h2>
+    <form action="thank_you.html">
+      <label for="fname" class = "required">First Name: &nbsp;</label>
+      <input type="text" id="fname" name="firstname" size = "40" maxlength = "32" pattern="[A-Za-z]{1,32}" oninvalid="this.setCustomValidity('Please enter a valid first name')"  required  ><br><br>
 
-      <!-- <label for="lname">Last Name: &nbsp;</label> -->
-      <input type="text" id="lname" name="lastname" placeholder="Last Name (required)" required style = "width: 40%"><br><br>
+      <label for="lname" class = "required">Last Name: &nbsp;</label>
+      <input type="text" id="lname" name="lastname" maxlength = "32" pattern="[A-Za-z]{1,32}" oninvalid="this.setCustomValidity('Please enter a valid last name')" size = "40" required ><br><br>
 
-      <!-- <label for="city">City: &nbsp;</label> -->
-      <input type="text" id="city" name="city" placeholder="City" style = "width: 40%"><br><br>
+      <label for="city">City: &nbsp;</label>
+      <input type="text" id="city" name="city" pattern="[a-zA-Z0-9 ]+" oninvalid="this.setCustomValidity('Please enter a valid city')" size = "48" ><br><br>
 
-      <!-- <label for="state">State: &nbsp;</label> -->
-      <input type="text" id="state" name="state" placeholder="State/Province" style = "width: 40%"><br><br>
+      <label for="state">State: &nbsp;</label>
+      <input type="text" id="state" pattern="[A-Za-z]{1,32}" name="state" size = "47" oninvalid="this.setCustomValidity('Please enter a valid state')" ><br><br>
 
-      <!-- <label for="country">Country of Origin: </label> -->
-      <select onchange="changeMe(this)" style = "width: 40%; color: #ccc;" >
-        <option value = "NA" selected disabled>Country of Origin (select one)</option>
+      <label for="country">Country of Origin: </label>
+      <select onchange="changeMe(this)" style = "width: 38%; color: #ccc;" >
+        <option value = "NA" selected disabled>Select One</option>
         <option value="CA">Canada</option>
         <option value="GB">United Kingdom</option>
         <option value="US">United States</option>
-        
+
       </select><br><br>
 
-      <input type="email" id="email" name="email" placeholder="Email (required)" required style = "width: 40%"><br><br>
-      <input type = "password" id = "pass" name = "pass" placeholder = "Password (required)" required style = "width: 40%"><br><br>
-      <textarea name = "message" maxlength = "1000" rows = "10" cols = "50" placeholder = "Tell us why you love SF"></textarea><br><br>
+      <label for="phone" class = "required">Phone: &nbsp; </label>
+      <input type="tel" id="phone" name="phone" placeholder="Ex: 123-456-7890" pattern="^\d{3}-\d{3}-\d{4}$" required size = "45"><br><br>
+
+      <label for="email" class = "required">Email: &nbsp;</label>
+      <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email')" size = "46"><br><br>
+
+      <label for="pass" class = "required">Password: &nbsp;</label>
+      <input type = "password" id = "pass" name = "pass" required oninvalid="this.setCustomValidity('Password must have 8 characters or more')" pattern=".{8,}" size = "42"><br><br>
+
+
+      
       <!-- <label for = "message">Tell us your travel plans</label> -->
-      <h3 style = "font-family: San Francisco Display Semibold">Reason for visiting</h3>
-      <label for="contactChoice1">Visiting Relatives</label>
-      <input type="radio" id="contactChoice1"
-      name="contact" value="visitingrelatives">
+      
+      <h3 style = "font-family: San Francisco Display Semibold" class = "required">Reason for visiting</h3>
+      <label for="contactChoice1" >Visiting Relatives</label>
+      <input type="radio" id="contactChoice1" name="contact" value="visitingrelatives" required>
       <br>
       <label for="contactChoice2">Sightseeing</label>
       <input type="radio" id="contactChoice2"
       name="contact" value="phone">
       <br>
-      
+
       <label for="contactChoice3">Visiting Colleges</label>
       <input type="radio" id="contactChoice3"
       name="contact" value="mail">
-      <br><br>
+      <br>
+
+      <h3 style = "font-family: San Francisco Display Semibold">Tell us why you love San Francisco</h3>
+      <textarea name = "message" id = "mess" maxlength = "1000" rows = "10" cols = "52"></textarea><br><br>
 
       <label for ="updateme" >Sign me up for the newsletter</label>
       <input type = "checkbox" name = "updateme"><br><br>
 
+
+
       <input type="submit" value="Submit">
     </form>
 
+  </main>
+  <aside>
+    <h2>Contact Us</h2>
+
+    <p style = "font-family: San Francisco Display Semibold">1234 Street Avenue, <br>
+    San Francisco, California, 94489</p>
+    <p style = "font-family: San Francisco Display Semibold">512-375-9942</p>
+    <p style = "font-family: San Francisco Display Semibold">exploresanfrancisco@gmail.com</p>
+    <ul class = "social-icons">
+      <li><a href="#"><i class="icon-facebook"></i></a></li>
+      <li ><a href="#"><i class="icon-twitter"></i></a></li>
+      <li><a href="#"><i class="icon-instagram"></i></a></li>
+      <li><a href="#"><i class="icon-yelp"></i></a></li>
+
+    </ul>
 
 
 
-       <!--    <p>San Francisco is home to a little bit of everything. Whether you’re a first time visitor or a long-time local, San Francisco's Golden Gates welcome all. This is the place to find out about all things San Francisco.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta, purus at suscipit ornare, erat turpis vehicula orci, ut semper neque leo at erat. Phasellus et laoreet tortor, a interdum tellus. Praesent vel tristique ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus id mauris id elit vestibulum auctor eu sit amet est. Sed leo ex, iaculis sed neque id, finibus venenatis felis. Cras vitae consequat mauris. Pellentesque dolor diam, viverra id augue in, scelerisque consectetur eros. Pellentesque ultricies neque vitae eros interdum convallis. Mauris eget turpis accumsan lectus vehicula consectetur eu id magna. Proin tellus lorem, fringilla ut varius non, aliquet a nibh. Vivamus quis egestas nulla, non pellentesque massa.</p>
-          <p>Aliquam eu interdum est. Morbi sollicitudin quam volutpat, tincidunt dolor ac, semper mi. Donec malesuada ipsum eget orci feugiat, a pulvinar nisl maximus. Nunc placerat quam ut ornare feugiat. Ut tincidunt eleifend est nec cursus. Sed ullamcorper sagittis justo. Pellentesque eget orci nisi. Fusce eu neque ut sem varius mollis.</p> -->
+  </aside>
 
-        </main>
-        <aside>
-          <h2>Contact Information</h2>
-
-          <p style = "font-family: San Francisco Display Semibold">1234 Street Avenue, <br>
-          San Francisco, California, 94489</p>
-          <p style = "font-family: San Francisco Display Semibold">512-375-9942</p>
-          <p style = "font-family: San Francisco Display Semibold">exploresanfrancisco@gmail.com</p>
-          <ul class = "social-icons">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-              <li ><a href="#"><i class="icon-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-instagram"></i></a></li>
-              <li><a href="#"><i class="icon-yelp"></i></a></li>
-              
-            </ul>
-
-
-
-        </aside>
-
-        <footer>
-         <p>Copyright Bradley Chen 2018</p>
-       </footer>
-     </div>
-   </body>
-   </html>
+  <footer>
+   <p>Copyright Bradley Chen 2018 <a href = "Citations.pdf" target = "_blank">Image and Text Citations</a></p>
+ </footer>
+</div>
+</body>
+</html>
